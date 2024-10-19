@@ -25,9 +25,4 @@ class YADisk:
         }
         response = requests.put(self._build_url('resources'), params=params,
                                 headers=self.get_common_params())
-        print(f'Создана папка: {folder_name}')
-        print(response.status_code)
         return response.status_code
-
-
-YADisk(TOKEN).create_new_folder('')
